@@ -1,6 +1,7 @@
 # Python_Game01
 A rock paper scissors game created to learn and practice python.
-Train of thought while creating the game:
+
+My train of thought while creating the game:
 1) To get input from the users on their choice of playing the game with the computer
 2) To get input from the users on their choice of rock, paper or scissors
 3) Ask for input again if the users key in an invalid input
