@@ -29,6 +29,7 @@ while game_continue:
     print(f"You chose {choices[playerchoice]}\nComputer chose {choices[computer_choice]}")
     if playerchoice==computer_choice:
         print("There is a tie🙌")
+        losecount+=1
     elif playerchoice ==1 and computer_choice==2:
         print("You win!😁")
     elif playerchoice ==2 and computer_choice==3:
