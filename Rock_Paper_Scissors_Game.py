@@ -5,7 +5,6 @@ game_continue=True
 import sys
 print("Welcome to the rock paper scissors game!")
 start_game=input("Type Yes if you would like to begin the game\n").lower()
-choices={1:"Rock", 2:"Scissors", 3:"Paper"}
 timesplayed=0
 wincount=0
 
@@ -24,10 +23,10 @@ def game():
         timesplayed+=1
     else:
         sys.exit("Thank you for your time, please join us next time!")
-
 #Determinining who won. 
 # Rock (1) wins scissors (2) but lose to paper (3)
 # Scissors (2) wins paper (3)
+    choices={1:"Rock", 2:"Scissors", 3:"Paper"}
     global wincount
     print(f"You chose {choices[playerchoice]}\nComputer chose {choices[computer_choice]}")
     if playerchoice==computer_choice:
