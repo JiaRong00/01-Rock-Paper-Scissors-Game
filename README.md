@@ -12,9 +12,10 @@ My train of thought while creating the game:
    
 The code makes use of:
 1) IF statements
-2) While loop
-3) Dictionaries
-4) Random
-5) input function
-6) f-string
-7) sys.exit()
+2) While loop (continue & break)
+3) Defining functions (gloabl & local scope)
+4) Dictionaries
+5) Random
+6) input function
+7) f-string
+8) sys.exit()
