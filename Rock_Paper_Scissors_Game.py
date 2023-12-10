@@ -1,12 +1,16 @@
 # This is the rock paper scissors game.
+import cowsay
+import sys
+import pyfiglet
 
 #Initiate game
+print(pyfiglet.figlet_format("RockPaperScissors"))
 game_continue=True
-import sys
-print("Welcome to the rock paper scissors game!")
+cowsay.cow("Hello, I am Daisy, your game buddy!")
 start_game=input("Type Yes if you would like to begin the game\n").lower()
 timesplayed=0
-wincount=0
+player_wins=0
+Daisy_wins=0
 
 #Define function to play game
 def game():
@@ -15,34 +19,35 @@ def game():
         #while loop to prompt player to enter valid input 
         while playerchoice != 1 and playerchoice!=2 and playerchoice !=3:
             playerchoice=int(input("You have entered an invalid value. Please try again.\nPlease enter:\n1 for Rock✊\n2 for Scissors✌️\n3 for Paper✋\n"))
-    #Computer chooses a random choice
+    #Daisy chooses a random choice
         import random
         choice_list=[1,2,3]
-        computer_choice=random.choice(choice_list)
+        Daisy_choice=random.choice(choice_list)
         global timesplayed
         timesplayed+=1
     else:
-        sys.exit("Thank you for your time, please join us next time!")
+        sys.exit(cowsay.cow("Come and play with Daisy next time!"))
 #Determinining who won. 
 # Rock (1) wins scissors (2) but lose to paper (3)
 # Scissors (2) wins paper (3)
     choices={1:"Rock", 2:"Scissors", 3:"Paper"}
-    global wincount
-    print(f"You chose {choices[playerchoice]}\nComputer chose {choices[computer_choice]}")
-    if playerchoice==computer_choice:
+    global player_wins
+    print(f"You chose {choices[playerchoice]}\nDaisy chose {choices[Daisy_choice]}")
+    if playerchoice==Daisy_choice:
         print("There is a tie🙌")
-    elif playerchoice ==1 and computer_choice==2:
+    elif playerchoice ==1 and Daisy_choice==2:
         print("You win!😁")
-        wincount+=1
-    elif playerchoice ==2 and computer_choice==3:
+        player_wins+=1
+    elif playerchoice ==2 and Daisy_choice==3:
         print("You win!😁")
-        wincount+=1
-    elif playerchoice ==3 and computer_choice==1:
+        player_wins+=1
+    elif playerchoice ==3 and Daisy_choice==1:
         print("You win!😁")
-        wincount+=1
+        player_wins+=1
     else:
         print("You lose!😭")
-    print(f"You have won {wincount} time(s) out of {timesplayed} round(s).")
+        Daisy_wins+=1
+    print(f"You have won {player_wins} time(s) out of {timesplayed} round(s).")
     
 #While loop to continue playing game
 while True: 
@@ -51,9 +56,15 @@ while True:
     if start_game=="yes":
         continue
     else:
-        print("Thank you for playing!")
+        print(pyfiglet.figlet_format("GAMEOVER"))
+        if player_wins>Daisy_wins:
+            print(pyfiglet.figlet_format("You WIN"))
+        elif Daisy_wins>player_wins:
+            print(pyfiglet.figlet_format("You LOSE"))
+        else:
+            print(pyfiglet.figlet_format("You TIED with Daisy"))
+        cowsay.cow("Thank you for playing with Daisy!")
         break
-
 
 
 
