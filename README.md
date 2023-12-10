@@ -1,7 +1,12 @@
 # Python_Game01
 A rock paper scissors game created to learn and practice python.
 
-My train of thought while creating the game:
+Additional features included to personalise this game:
+1) Use of ASCII art
+2) Use of cowsay package
+3) Use of emoji
+
+My train of thought while creating the game flow:
 1) To get input from the users on their choice of playing the game with the computer
 2) To get input from the users on their choice of rock, paper or scissors
 3) Ask for input again if the users key in an invalid input
@@ -19,3 +24,5 @@ The code makes use of:
 6) input function
 7) f-string
 8) sys.exit()
+9) ASCII art
+10) cowsay
