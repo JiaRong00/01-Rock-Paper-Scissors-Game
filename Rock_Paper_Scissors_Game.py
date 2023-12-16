@@ -32,6 +32,7 @@ def game():
 # Scissors (2) wins paper (3)
     choices={1:"Rock", 2:"Scissors", 3:"Paper"}
     global player_wins
+    global Daisy_wins
     print(f"You chose {choices[playerchoice]}\nDaisy chose {choices[Daisy_choice]}")
     if playerchoice==Daisy_choice:
         print("There is a tie🙌")
