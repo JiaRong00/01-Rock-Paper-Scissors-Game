@@ -1,5 +1,7 @@
 # Python_Game01
-A rock paper scissors game created to learn and practice python.
+A rock paper scissors game created to learn and practice python. This project contains 2 files:
+1) Rock_Paper_Scissors_Game.py which consists of the main game code
+2) RockPaperScissors_ASCII.py which contains the rock, paper, scissors ASCII art
 
 Additional features included to personalise this game:
 1) Use of ASCII art for game aesthetics 
