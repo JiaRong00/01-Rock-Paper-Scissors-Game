@@ -1,5 +1,5 @@
 # Python_Game01
-A rock paper scissors game created to learn and practice python. In this game, players can choose a computer character that they would like to play the game with and play multiple rounds of the game. The choices of both the player and character will be shown for each round and the game winning statistics will be be displayed.
+A rock paper scissors game created to learn and practice python. In this game, players can choose a computer character that they would like to play the game with and play multiple rounds of the game. The choices of both the player and character will be shown for each round and the game winning statistics will be be displayed. Players have the choice of changing the character they will be playing against after each round and the scores can be reset if they wish to.
 
 This project contains 2 files:
 1) Rock_Paper_Scissors_Game.py which consists of the main game code
@@ -19,16 +19,18 @@ My train of thought while creating the game flow:
 6) To display the choices of both player and character
 7) To determine and let player know who won the round
 8) To allow players to continue playing if they wish to.
-9) To print out overall game statistics at the end of the game.
+9) To allow players to change their opponent and reset the scores.
+10) To print out overall game statistics at the end of the game.
    
 The code makes use of:
 1) IF statements
 2) While loop (continue & break)
 3) Defining functions (gloabl & local scope)
-4) Dictionaries
-5) Random
-6) input function
-7) f-string
-8) sys.exit()
-9) ASCII art
-10) cowsay package
+4) Match-case statements
+5) Dictionaries
+6) Random
+7) input function
+8) f-string
+9) sys.exit()
+10) ASCII art
+11) cowsay package
