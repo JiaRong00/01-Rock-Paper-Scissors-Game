@@ -50,30 +50,39 @@ def character_function(character, string):
 print(pyfiglet.figlet_format("RockPaperScissors"))
 game_continue=True
 start_game=input("Type Yes if you would like to begin the game\n").strip().lower()
+
+#define function to choose character
+chosen_character=""
+def select_character():
+  character_profile()
+  global chosen_character
+  while True:
+    print('''
+        Character Name:      Character Avatar:
+        Daisy                Cow
+        Stryker              Dragon
+        Kumi                 Fox
+        Simba                Lion
+        Charlotte            Pig
+        Stanley              Stegosaurus
+        Rex                  Trex
+        Flash                Turtle''')
+    chosen_character=input("Which character would you like to play with? Enter the character name\n").strip().title()
+    if chosen_character in character_names:
+        break
+    else:
+        chosen_character=input("You have keyed in an invalid character. Which character would you like to play with?").strip().title()
+    
+      
 if start_game =='yes':
-    character_profile()
-    while True:
-        print('''
-              Character Name:      Character Avatar:
-              Daisy                Cow
-              Stryker              Dragon
-              Kumi                 Fox
-              Simba                Lion
-              Charlotte            Pig
-              Stanley              Stegosaurus
-              Rex                  Trex
-              Flash                Turtle''')
-        chosen_character=input("Which character would you like to play with? Enter the character name\n").strip().title()
-        if chosen_character in character_names:
-            break
-        else:
-            chosen_character=input("You have keyed in an invalid character. Which character would you like to play with?").strip().title()
+    select_character()
 else:
         sys.exit(cowsay.cow("Do join for a game next time!"))
 
 timesplayed=0
 player_wins=0
 Character_wins=0
+
 
 #Define function to play game
 def game():
@@ -119,9 +128,17 @@ def game():
 #While loop to continue playing game
 while True: 
     game()
-    start_game=input("Would you like to play another round? Please enter Yes or No.\n").strip().lower()
+    start_game=input("Would you like to play another round? Please enter Yes or No. If you would like to play with a different character, please enter Back\n").strip().lower()
     if start_game=="yes":
         continue
+    elif start_game=="back": #Allow players to choose a different opponent and reset scores
+      select_character()
+      restart=input("Would you like to reset your score? Please enter Yes or No\n").strip().lower()
+      if restart=="yes":
+        player_wins=0
+        Character_wins=0
+        timesplayed=0
+      start_game="yes"
     else:
         print(pyfiglet.figlet_format("GAMEOVER"))
         if player_wins>Character_wins:
