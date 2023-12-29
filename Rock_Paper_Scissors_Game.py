@@ -71,13 +71,10 @@ def select_character():
     if chosen_character in character_names:
         break
     else:
-        chosen_character=input("You have keyed in an invalid character. Which character would you like to play with?").strip().title()
+        chosen_character=input("You have keyed in an invalid character. Which character would you like to play with?\n").strip().title()
     
       
-if start_game =='yes':
-    select_character()
-else:
-        sys.exit(cowsay.cow("Do join for a game next time!"))
+
 
 timesplayed=0
 player_wins=0
@@ -126,29 +123,36 @@ def game():
     print(f"You have won {player_wins} time(s) out of {timesplayed} round(s).")
     
 #While loop to continue playing game
+if start_game =='yes':
+    select_character()
+else:
+    sys.exit(cowsay.cow("Do join for a game next time!"))
+
 while True: 
-    game()
-    start_game=input("Would you like to play another round? Please enter Yes or No. If you would like to play with a different character, please enter Back\n").strip().lower()
-    if start_game=="yes":
-        continue
-    elif start_game=="back": #Allow players to choose a different opponent and reset scores
-      select_character()
-      restart=input("Would you like to reset your score? Please enter Yes or No\n").strip().lower()
-      if restart=="yes":
-        player_wins=0
-        Character_wins=0
-        timesplayed=0
-      start_game="yes"
-    else:
-        print(pyfiglet.figlet_format("GAMEOVER"))
-        if player_wins>Character_wins:
-            print(pyfiglet.figlet_format("You WIN"))
-        elif Character_wins>player_wins:
-            print(pyfiglet.figlet_format("You LOSE"))
-        else:
-            print(pyfiglet.figlet_format(f"You TIED with {chosen_character}"))
-        character_function(chosen_character, f"Thank you for playing with {chosen_character}!")
-        break
-
-
+    try:
+        if start_game =='yes':
+            game()
+            start_game=input("Would you like to play another round? Please enter Yes or No. If you would like to play with a different character, please enter Back\n").strip().lower()
+            if start_game=="yes":
+                continue
+            elif start_game=="back": #Allow players to choose a different opponent and reset scores
+                select_character()
+                restart=input("Would you like to reset your score? Please enter Yes or No\n").strip().lower()
+                if restart=="yes":
+                    player_wins=0
+                    Character_wins=0
+                    timesplayed=0
+                start_game="yes"
+            else:
+                print(pyfiglet.figlet_format("GAMEOVER"))
+                if player_wins>Character_wins:
+                    print(pyfiglet.figlet_format("You WIN"))
+                elif Character_wins>player_wins:
+                        print(pyfiglet.figlet_format("You LOSE"))
+                else:
+                    print(pyfiglet.figlet_format(f"You TIED with {chosen_character}"))
+                character_function(chosen_character, f"Thank you for playing with {chosen_character}!")
+                break
+    except EOFError: 
+        sys.exit(cowsay.cow("Do join for a game next time!"))
 
