@@ -1,10 +1,20 @@
 # Python_Game01
-A rock paper scissors game created to learn and practice python. In this game, players can choose a computer character that they would like to play the game with and play multiple rounds of the game. The choices of both the player and character will be shown for each round and the game winning statistics will be be displayed. Players have the choice of changing the character they will be playing against after each round and the scores can be reset if they wish to.
+A rock paper scissors game created to learn and practice python. In this game, players can choose a computer character (cowsay character) that they would like to play the game with and play multiple rounds of the game. The choices of both the player and character will be shown for each round and the game winning statistics will be be displayed. Players have the choice of changing the character they will be playing against after each round and the scores can be reset if they wish to. 
 
-This project contains 2 files:
+This project consists of 2 versions of code:
+1) Rock_Paper_Scissors_Game.py (Original version)
+2) Pygame_RockPaperScissors.py (Created using pygame, based on the first version. However, this version does not enable choosing of game opponents) 
+
+The orginal version consists of 2 files:
 1) Rock_Paper_Scissors_Game.py which consists of the main game code
 2) RockPaperScissors_ASCII.py which contains the rock, paper, scissors ASCII art
 
+The Pygame version consists of:
+1) Pygame_RockPaperScissors.py
+2) font folder
+3) graphics folder
+
+Brief details on the orginal version:
 Additional features included to personalise this game:
 1) Use of ASCII art for game aesthetics 
 2) Use of cowsay package animals as game characters. Users can choose which game character they would like to play with
@@ -34,3 +44,4 @@ The code makes use of:
 9) sys.exit()
 10) ASCII art
 11) cowsay package
+12) Try and Except
