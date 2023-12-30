@@ -31,7 +31,12 @@ My train of thought while creating the game flow:
 8) To allow players to continue playing if they wish to.
 9) To allow players to change their opponent and reset the scores.
 10) To print out overall game statistics at the end of the game.
-   
+
+Screenshots of the game:
+<img width="427" alt="image" src="https://github.com/JiaRong00/01-Rock-Paper-Scissors-Game/assets/149306287/2a8d9e86-6ca3-4157-ae6a-a22717b7595e">
+<img width="806" alt="image" src="https://github.com/JiaRong00/01-Rock-Paper-Scissors-Game/assets/149306287/8dc684d2-d0cc-4327-95eb-281f64334810">
+<img width="324" alt="image" src="https://github.com/JiaRong00/01-Rock-Paper-Scissors-Game/assets/149306287/46504862-f72a-4fab-9771-f94b5ddf5618">
+
 The code makes use of:
 1) IF statements
 2) While loop (continue & break)
@@ -45,3 +50,8 @@ The code makes use of:
 10) ASCII art
 11) cowsay package
 12) Try and Except
+
+Screenshots for pygame version:
+<img width="450" alt="image" src="https://github.com/JiaRong00/01-Rock-Paper-Scissors-Game/assets/149306287/2277a1f2-8b40-4d3c-89d2-97f8b39a66cd">
+<img width="446" alt="image" src="https://github.com/JiaRong00/01-Rock-Paper-Scissors-Game/assets/149306287/448c0bed-3cb9-4e47-9fac-c3af8739421f">
+
