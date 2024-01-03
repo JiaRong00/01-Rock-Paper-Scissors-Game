@@ -117,7 +117,6 @@ while True:
             elif back_rect.collidepoint(event.pos):
                 if show_choice:
                     show_choice=False
-                elif show_choice ==False:
                     player2_back=player2
                     player2=""
                 else:
