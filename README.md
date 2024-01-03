@@ -1,9 +1,9 @@
 # Python_Game01
-A rock paper scissors game created to learn and practice python. In this game, players can choose a computer character (cowsay character) that they would like to play the game with and play multiple rounds of the game. The choices of both the player and character will be shown for each round and the game winning statistics will be be displayed. Players have the choice of changing the character they will be playing against after each round and the scores can be reset if they wish to. 
+A rock paper scissors game created to learn and practice python. In this game, players can choose a computer character that they would like to play the game with and play multiple rounds of the game. The choices of both the player and character will be shown for each round and the game winning statistics will be be displayed. Players have the choice of changing the character they will be playing against after each round and the scores can be reset if they wish to. 
 
 This project consists of 2 versions of code:
-1) Rock_Paper_Scissors_Game.py (Original version)
-2) Pygame_RockPaperScissors.py (Created using pygame, based on the first version. However, this version does not enable choosing of game opponents) 
+1) Rock_Paper_Scissors_Game.py (Original version, refer to description above)
+2) Pygame_RockPaperScissors.py (Created using pygame, based on the first version. Players can rechoose their opponents by clicking on the back button and reset the scores by clicking on reset button. However, scores are automatically reset if characters are changed.) 
 
 The orginal version consists of 2 files:
 1) Rock_Paper_Scissors_Game.py which consists of the main game code
